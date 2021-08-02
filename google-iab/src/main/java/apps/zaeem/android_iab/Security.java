@@ -27,8 +27,8 @@ class Security {
      * Verifies that the data was signed with the given signature
      *
      * @param base64PublicKey the base64-encoded public key to use for verifying.
-     * @param signedData the signed JSON string (signed, not encrypted)
-     * @param signature the signature for the data, signed with the private key
+     * @param signedData      the signed JSON string (signed, not encrypted)
+     * @param signature       the signature for the data, signed with the private key
      */
     static public boolean verifyPurchase(String base64PublicKey, String signedData, String signature) {
         if ((TextUtils.isEmpty(signedData) || TextUtils.isEmpty(base64PublicKey)
@@ -103,5 +103,10 @@ class Security {
             Log.e(TAG, "Signature exception.");
         }
         return false;
+    }
+
+    void encrypt() {
+
+        // TODO:
     }
 }
